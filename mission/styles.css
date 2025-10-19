@@ -42,8 +42,8 @@ body.dark .subtitle {
     border-bottom-color: #555;
 }
 
-body.dark .titles h4 {
-    color: #4A9EFF; /* Lighter blue for better contrast on dark background */
+body.dark .titles h2 {
+    color: #4A9EFF; 
 }
 
 body.dark p {
@@ -79,7 +79,7 @@ body.dark li {
     margin: 0 0 25px 0;
 }
 
-.titles h4 {
+.titles h2 {
     color: #006EB6;
     font-size: 14px;
     letter-spacing: 2px;
