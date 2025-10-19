@@ -1,4 +1,5 @@
 // Portfolio page JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
     // Add fade-in animation on page load
     const container = document.querySelector('.container');
