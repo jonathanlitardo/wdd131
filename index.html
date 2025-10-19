@@ -6,22 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jonathan Litardo"> 
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="main.js" defer></script>
+    <title>WDD 131 Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>Jonathan Litardo: WDD 131 Portfolio</h1>
+    <header class="header">
+        <h1>Jonathan Litardo - WDD 131 Portfolio</h1>
+        <p>A curated collection of assignments and exercises</p>
     </header>
-    <main>
+    <main class="container">
+
+        <p class="welcome">Welcome! This homepage collects links to my WDD 131 projects.</p>
+
+        <h2 class="section-title">Work</h2>
+
         <!-- Content will be added here throughout the semester -->
         
-        <a href="coolpics/index.html">Coolpics</a>
-        <br>
-        <a href="blog/">Blog</a>
-        <br>
+        <ul class="project-list">
+            <li class="project-item">
+                <a href="mission/" class="project-link">Mission Statement</a>
+                <span class="project-description">(HTML/CSS mockup recreation)</span>
+            </li>
+            <li class="project-item">
+                <a href="coolpics/" class="project-link">Cool Pics</a>
+                <span class="project-description">(Responsive gallery project)</span>
+            </li>
+            <li class="project-item">
+                <a href="blog/" class="project-link">Book Blog</a>
+                <span class="project-description">(Designed book blog)</span>
+            </li>
+            
+        </ul>
+
     </main>
-    <footer>
-        <!-- Footer content will be added here -->
+    <footer class="footer">
+        © 2025 JUN · WDD 131
     </footer> 
 </body>
 </html>
