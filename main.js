@@ -1,14 +1,5 @@
 // Portfolio page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    const projectLinks = document.querySelectorAll('.project-link');
-    
-    projectLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Project link clicked: ' + this.textContent);
-        });
-    });
-
     // Add fade-in animation on page load
     const container = document.querySelector('.container');
     container.style.opacity = '0';
