@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity Hub</title>
+    <meta
+      name="description"
+      content="Interactive cybersecurity learning tools and resources for students and beginners."
+    />
+    <meta name="author" content="Jonathan Litardo" />
+    <link rel="icon" type="image/x-icon" href="images/logo-cybersec-hub.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script type="module" src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo-link">
+          <div class="logo">
+            <img
+              src="images/logo-cybersec-hub.png"
+              alt="Cybersec Hub"
+              class="logo-img"
+            />
+            <span class="logo-text"
+              >CYBERSECURITY<span class="logo-accent">HUB</span></span
+            >
+          </div>
+        </a>
+
+        <button
+          class="mobile-menu-btn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links">
+          <a href="index.html" class="active" aria-current="page">Home</a>
+          <a href="tools.html">Security Tools</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Master Cybersecurity Fundamentals</h1>
+          <p class="hero-subtitle">
+            Build your security skills with hands-on tools, interactive quizzes,
+            and real-world scenarios designed for aspiring security
+            professionals.
+          </p>
+          <div class="hero-cta">
+            <a href="tools.html" class="btn btn-primary">
+              <i class="fas fa-toolbox" aria-hidden="true"></i>
+              Explore Tools
+            </a>
+            <a href="#password-section" class="btn btn-secondary">
+              <i class="fas fa-key" aria-hidden="true"></i>
+              Test Password
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-container">
+            <img
+              src="images/hero.jpg"
+              alt="Cybersecurity professional working on security systems"
+              class="hero-image"
+              width="500"
+              height="400"
+              loading="eager"
+            />
+            <div class="hero-image-overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Password Strength Analyzer -->
+      <section id="password-section" class="section password-section">
+        <div class="section-header">
+          <span class="section-tag"
+            ><i class="fas fa-lock" aria-hidden="true"></i> Security Tool</span
+          >
+          <h2>Password Strength Analyzer</h2>
+          <p>
+            Test your password security in real-time. Our analyzer checks
+            length, complexity, common patterns, and estimates crack time.
+          </p>
+        </div>
+
+        <div class="password-analyzer">
+          <div class="password-input-wrapper">
+            <div class="input-container">
+              <i class="fas fa-key input-icon" aria-hidden="true"></i>
+              <label for="password-input" class="visually-hidden"
+                >Enter password to test</label
+              >
+              <input
+                type="password"
+                id="password-input"
+                placeholder="Enter a password to test..."
+                autocomplete="off"
+              />
+              <button
+                id="toggle-visibility"
+                class="visibility-btn"
+                type="button"
+                aria-label="Toggle password visibility"
+              >
+                <i class="fas fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="strength-meter">
+              <div
+                class="meter-bar"
+                role="progressbar"
+                aria-label="Password strength"
+              >
+                <div class="meter-fill" id="meter-fill"></div>
+              </div>
+              <span class="strength-label" id="strength-label"
+                >Enter a password</span
+              >
+            </div>
+          </div>
+
+          <div class="password-feedback">
+            <div class="feedback-grid">
+              <div class="feedback-card">
+                <div class="feedback-icon" id="length-icon">
+                  <i class="fas fa-ruler" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-content">
+                  <h4>Length</h4>
+                  <p id="length-feedback">At least 12 characters</p>
+                </div>
+              </div>
+
+              <div class="feedback-card">
+                <div class="feedback-icon" id="uppercase-icon">
+                  <i class="fas fa-font" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-content">
+                  <h4>Uppercase</h4>
+                  <p id="uppercase-feedback">Include A-Z letters</p>
+                </div>
+              </div>
+
+              <div class="feedback-card">
+                <div class="feedback-icon" id="lowercase-icon">
+                  <i class="fas fa-text-height" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-content">
+                  <h4>Lowercase</h4>
+                  <p id="lowercase-feedback">Include a-z letters</p>
+                </div>
+              </div>
+
+              <div class="feedback-card">
+                <div class="feedback-icon" id="numbers-icon">
+                  <i class="fas fa-hashtag" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-content">
+                  <h4>Numbers</h4>
+                  <p id="numbers-feedback">Include 0-9 digits</p>
+                </div>
+              </div>
+
+              <div class="feedback-card">
+                <div class="feedback-icon" id="symbols-icon">
+                  <i class="fas fa-asterisk" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-content">
+                  <h4>Symbols</h4>
+                  <p id="symbols-feedback">Include !@#$%^&*</p>
+                </div>
+              </div>
+
+              <div class="feedback-card">
+                <div class="feedback-icon" id="patterns-icon">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-content">
+                  <h4>Patterns</h4>
+                  <p id="patterns-feedback">Avoid common patterns</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="crack-time" id="crack-time">
+              <i class="fas fa-clock" aria-hidden="true"></i>
+              <span
+                >Estimated crack time:
+                <strong id="crack-time-value">--</strong></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CIA Triad Section -->
+      <section id="cia-section" class="section cia-section">
+        <div class="section-header">
+          <span class="section-tag"
+            ><i class="fas fa-graduation-cap" aria-hidden="true"></i> Core
+            Concept</span
+          >
+          <h2>The CIA Triad</h2>
+          <p>
+            The foundation of information security. Click each principle to
+            explore threats, examples, and countermeasures.
+          </p>
+        </div>
+
+        <!-- CIA Cards -->
+        <div class="cia-triad-cards">
+          <div
+            class="cia-card"
+            data-principle="confidentiality"
+            aria-label="Learn more about confidentiality"
+            tabindex="0"
+            role="button"
+          >
+            <div class="cia-card-icon confidentiality">
+              <i class="fas fa-user-secret" aria-hidden="true"></i>
+            </div>
+            <h3>Confidentiality</h3>
+            <p>
+              Protect sensitive data from unauthorized access and disclosure.
+            </p>
+            <span class="cia-card-link"
+              >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+            ></span>
+          </div>
+
+          <div
+            class="cia-card"
+            data-principle="integrity"
+            tabindex="0"
+            role="button"
+            aria-label="Learn more about integrity"
+          >
+            <div class="cia-card-icon integrity">
+              <i class="fas fa-check-double" aria-hidden="true"></i>
+            </div>
+            <h3>Integrity</h3>
+            <p>Ensure data accuracy, consistency, and trustworthiness.</p>
+            <span class="cia-card-link"
+              >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+            ></span>
+          </div>
+
+          <div
+            class="cia-card"
+            data-principle="availability"
+            tabindex="0"
+            role="button"
+            aria-label="Learn more about availability"
+          >
+            <div class="cia-card-icon availability">
+              <i class="fas fa-server" aria-hidden="true"></i>
+            </div>
+            <h3>Availability</h3>
+            <p>
+              Keep systems and data accessible when authorized users need them.
+            </p>
+            <span class="cia-card-link"
+              >Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- CIA Modal -->
+        <div
+          class="cia-modal-overlay"
+          id="cia-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="cia-modal-title"
+        >
+          <div class="cia-modal-content">
+            <button
+              class="modal-close"
+              id="cia-modal-close"
+              type="button"
+              aria-label="Close modal"
+            >
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+
+            <div class="cia-modal-header" id="cia-modal-header">
+              <div class="cia-modal-icon" id="cia-modal-icon">
+                <i class="fas fa-user-secret" aria-hidden="true"></i>
+              </div>
+              <div class="cia-modal-title-group">
+                <h2 id="cia-modal-title">Confidentiality</h2>
+                <p class="cia-modal-tagline" id="cia-modal-tagline">
+                  Keeping Secrets Secret
+                </p>
+              </div>
+            </div>
+
+            <div class="cia-modal-body">
+              <p class="cia-modal-description" id="cia-modal-description"></p>
+
+              <div class="cia-modal-section">
+                <h4>
+                  <i class="fas fa-key" aria-hidden="true"></i> Key Points
+                </h4>
+                <ul id="cia-modal-keypoints"></ul>
+              </div>
+
+              <div class="cia-modal-section">
+                <h4>
+                  <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  Common Threats
+                </h4>
+                <ul id="cia-modal-threats"></ul>
+              </div>
+
+              <div class="cia-modal-section">
+                <h4>
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                  Countermeasures
+                </h4>
+                <ul id="cia-modal-countermeasures"></ul>
+              </div>
+
+              <div class="cia-modal-section">
+                <h4>
+                  <i class="fas fa-building" aria-hidden="true"></i> Real-World
+                  Examples
+                </h4>
+                <div class="cia-examples-grid" id="cia-modal-examples"></div>
+              </div>
+
+              <div class="cia-modal-section">
+                <h4>
+                  <i class="fas fa-certificate" aria-hidden="true"></i> Related
+                  Standards
+                </h4>
+                <div class="cia-standards" id="cia-modal-standards"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CIA Quiz -->
+        <div class="cia-quiz">
+          <div class="quiz-header">
+            <h3>
+              <i class="fas fa-question-circle" aria-hidden="true"></i> Test
+              Your Knowledge
+            </h3>
+            <p>
+              Identify which CIA principle is being violated in each scenario.
+            </p>
+          </div>
+
+          <div class="quiz-container" id="quiz-container">
+            <div class="quiz-progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Quiz progress"
+              >
+                <div class="progress-fill" id="quiz-progress"></div>
+              </div>
+              <span id="quiz-progress-text">Question 1 of 6</span>
+            </div>
+
+            <div class="quiz-question" id="quiz-question">
+              <p>Loading question...</p>
+            </div>
+
+            <div class="quiz-options" id="quiz-options">
+              <button
+                class="quiz-option"
+                data-answer="confidentiality"
+                type="button"
+              >
+                <i class="fas fa-user-secret" aria-hidden="true"></i>
+                Confidentiality
+              </button>
+              <button class="quiz-option" data-answer="integrity" type="button">
+                <i class="fas fa-check-double" aria-hidden="true"></i>
+                Integrity
+              </button>
+              <button
+                class="quiz-option"
+                data-answer="availability"
+                type="button"
+              >
+                <i class="fas fa-server" aria-hidden="true"></i>
+                Availability
+              </button>
+            </div>
+
+            <div
+              class="quiz-feedback"
+              id="quiz-feedback"
+              aria-live="polite"
+            ></div>
+
+            <div class="quiz-controls">
+              <button
+                class="btn btn-secondary"
+                id="next-question"
+                style="display: none"
+                type="button"
+                aria-label="Next question"
+              >
+                Next Question
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-results" id="quiz-results" style="display: none">
+            <div class="results-icon">
+              <i class="fas fa-trophy" aria-hidden="true"></i>
+            </div>
+            <h3>Quiz Complete!</h3>
+            <p class="results-score">
+              You scored <strong id="final-score">0</strong> out of
+              <strong>6</strong>
+            </p>
+            <p
+              class="results-message"
+              id="results-message"
+              aria-live="polite"
+            ></p>
+            <button class="btn btn-primary" id="restart-quiz" type="button">
+              <i class="fas fa-redo" aria-hidden="true"></i> Try Again
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Attack Types Section -->
+      <section id="attacks-section" class="section attacks-section">
+        <div class="section-header">
+          <span class="section-tag"
+            ><i class="fas fa-skull-crossbones" aria-hidden="true"></i> Know
+            Your Enemy</span
+          >
+          <h2>Common Cyber Attacks</h2>
+          <p>
+            Understanding how attacks work is the first step in defending
+            against them. Click each card to learn about attack methods and
+            defense strategies.
+          </p>
+        </div>
+
+        <div class="attacks-grid" id="attacks-grid">
+          <!-- Attack cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Attack Modal -->
+        <div
+          class="attack-modal-overlay"
+          id="attack-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="attack-modal-title"
+        >
+          <div class="attack-modal-content">
+            <button
+              class="modal-close"
+              id="attack-modal-close"
+              type="button"
+              aria-label="Close modal"
+            >
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+
+            <div class="attack-modal-header">
+              <div class="attack-modal-icon" id="attack-modal-icon">
+                <i class="fas fa-skull" aria-hidden="true"></i>
+              </div>
+              <div class="attack-modal-title-group">
+                <h2 id="attack-modal-title">Attack Name</h2>
+                <div class="attack-modal-badges">
+                  <span class="badge severity-badge" id="attack-modal-severity"
+                    >Severity</span
+                  >
+                  <span class="badge category-badge" id="attack-modal-category"
+                    >Category</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="attack-modal-body">
+              <div class="attack-section">
+                <h4>
+                  <i class="fas fa-info-circle" aria-hidden="true"></i> How It
+                  Works
+                </h4>
+                <p id="attack-modal-description"></p>
+              </div>
+
+              <div class="attack-section">
+                <h4>
+                  <i class="fas fa-newspaper" aria-hidden="true"></i> Real-World
+                  Examples
+                </h4>
+                <ul id="attack-modal-examples"></ul>
+              </div>
+
+              <div class="attack-section">
+                <h4>
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i> Defense
+                  Strategies
+                </h4>
+                <ul id="attack-modal-defenses"></ul>
+              </div>
+
+              <div class="attack-section">
+                <h4>
+                  <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  CIA Impact
+                </h4>
+                <div class="cia-impact" id="attack-modal-cia"></div>
+              </div>
+
+              <div class="attack-section">
+                <h4>
+                  <i class="fas fa-book" aria-hidden="true"></i> Learn More
+                </h4>
+                <div class="attack-resources" id="attack-modal-resources"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <img
+              src="images/logo-cybersec-hub.png"
+              alt="Cybersecurity Hub Logo"
+              class="logo-img"
+            />
+            <span class="logo-text"
+              >CYBERSECURITY<span class="logo-accent">HUB</span></span
+            >
+          </div>
+          <p>
+            Interactive cybersecurity learning for aspiring security
+            professionals.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="tools.html">Security Tools</a>
+          <a href="#password-section">Password Analyzer</a>
+          <a href="#cia-section">CIA Triad</a>
+          <a href="#attacks-section">Attack Types</a>
+        </div>
+
+        <div class="footer-resources">
+          <h4>Resources</h4>
+          <a
+            href="https://www.comptia.org/certifications/security"
+            target="_blank"
+            rel="noopener"
+            >CompTIA Security+</a
+          >
+          <a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a>
+          <a
+            href="https://www.nist.gov/cybersecurity"
+            target="_blank"
+            rel="noopener"
+            >NIST Cybersecurity</a
+          >
+          <a href="https://www.sans.org/" target="_blank" rel="noopener"
+            >SANS Institute</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cybersecurity Hub. Created by Jonathan Litardo.</p>
+      </div>
+    </footer>
+  </body>
+</html>

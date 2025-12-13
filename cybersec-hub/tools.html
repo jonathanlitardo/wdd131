@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Tools</title>
+    <meta
+      name="description"
+      content="Explore essential cybersecurity tools for penetration testing, network analysis, and digital forensics. Complete database with installation guides and tutorials."
+    />
+    <meta name="author" content="Jonathan Litardo" />
+    <link rel="icon" type="image/x-icon" href="images/logo-cybersec-hub.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="scripts/tools.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo-link">
+          <div class="logo">
+            <img
+              src="images/logo-cybersec-hub.png"
+              alt="Cybersec Hub"
+              class="logo-img"
+            />
+            <span class="logo-text"
+              >CYBERSECURITY<span class="logo-accent">HUB</span></span
+            >
+          </div>
+        </a>
+
+        <button
+          class="mobile-menu-btn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tools.html" class="active" aria-current="page"
+            >Security Tools</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Tools Hero -->
+      <section class="tools-hero">
+        <div class="tools-hero-content">
+          <h1>Security Tools Database</h1>
+          <p>
+            Explore essential cybersecurity tools used by professionals. From
+            network analysis to penetration testing, discover the software that
+            powers cybersecurity operations.
+          </p>
+        </div>
+      </section>
+
+      <!-- Search and Filters -->
+      <section class="tools-filters">
+        <div class="search-container">
+          <i class="fas fa-search search-icon" aria-hidden="true"></i>
+          <label for="search-input" class="visually-hidden"
+            >Search tools by name or description</label
+          >
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search tools by name or description..."
+            autocomplete="off"
+          />
+          <button
+            class="clear-search"
+            id="clear-search"
+            style="display: none"
+            type="button"
+            aria-label="Clear search"
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="filter-groups">
+          <div class="filter-group">
+            <label id="category-label">Category</label>
+            <div
+              class="filter-buttons"
+              id="category-filters"
+              role="group"
+              aria-labelledby="category-label"
+            >
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="network" type="button">
+                <i class="fas fa-network-wired" aria-hidden="true"></i> Network
+              </button>
+              <button class="filter-btn" data-filter="pentesting" type="button">
+                <i class="fas fa-bug" aria-hidden="true"></i> Pentesting
+              </button>
+              <button class="filter-btn" data-filter="forensics" type="button">
+                <i class="fas fa-microscope" aria-hidden="true"></i> Forensics
+              </button>
+              <button class="filter-btn" data-filter="web" type="button">
+                <i class="fas fa-globe" aria-hidden="true"></i> Web Security
+              </button>
+              <button class="filter-btn" data-filter="osint" type="button">
+                <i class="fas fa-search" aria-hidden="true"></i> OSINT
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label id="difficulty-label">Difficulty</label>
+            <div
+              class="filter-buttons"
+              id="difficulty-filters"
+              role="group"
+              aria-labelledby="difficulty-label"
+            >
+              <button
+                class="filter-btn active"
+                data-difficulty="all"
+                type="button"
+              >
+                All Levels
+              </button>
+              <button
+                class="filter-btn"
+                data-difficulty="beginner"
+                type="button"
+              >
+                <i class="fas fa-seedling" aria-hidden="true"></i> Beginner
+              </button>
+              <button
+                class="filter-btn"
+                data-difficulty="intermediate"
+                type="button"
+              >
+                <i class="fas fa-leaf" aria-hidden="true"></i> Intermediate
+              </button>
+              <button
+                class="filter-btn"
+                data-difficulty="advanced"
+                type="button"
+              >
+                <i class="fas fa-tree" aria-hidden="true"></i> Advanced
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-results">
+          <span id="results-count" aria-live="polite">Showing 20 tools</span>
+          <button
+            class="btn btn-secondary btn-small"
+            id="reset-filters"
+            type="button"
+          >
+            <i class="fas fa-undo" aria-hidden="true"></i> Reset Filters
+          </button>
+        </div>
+      </section>
+
+      <!-- Tools Grid -->
+      <section class="tools-grid-section">
+        <div class="tools-grid" id="tools-grid">
+          <!-- Tools will be dynamically inserted here -->
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <h3>No tools found</h3>
+          <p>Try adjusting your search or filters</p>
+          <button class="btn btn-primary" id="clear-all-filters" type="button">
+            Clear All Filters
+          </button>
+        </div>
+      </section>
+
+      <!-- Tool Modal -->
+      <div
+        class="modal-overlay"
+        id="tool-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <div class="modal-content">
+          <button
+            class="modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Close modal"
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+
+          <div class="modal-header">
+            <div class="modal-icon" id="modal-icon">
+              <i class="fas fa-terminal" aria-hidden="true"></i>
+            </div>
+            <div class="modal-title-group">
+              <h2 id="modal-title">Tool Name</h2>
+              <div class="modal-badges">
+                <span class="badge category-badge" id="modal-category"
+                  >Category</span
+                >
+                <span class="badge difficulty-badge" id="modal-difficulty"
+                  >Difficulty</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-body">
+            <div class="modal-section">
+              <h4>
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                Description
+              </h4>
+              <p id="modal-description">Tool description goes here.</p>
+            </div>
+
+            <div class="modal-section">
+              <h4>
+                <i class="fas fa-download" aria-hidden="true"></i> Installation
+              </h4>
+              <div class="install-grid" id="modal-installation">
+                <!-- Installation commands will be inserted here -->
+              </div>
+            </div>
+
+            <div class="modal-section">
+              <h4>
+                <i class="fas fa-bullseye" aria-hidden="true"></i> Use Cases
+              </h4>
+              <ul id="modal-usecases">
+                <!-- Use cases will be inserted here -->
+              </ul>
+            </div>
+
+            <div class="modal-section">
+              <h4>
+                <i class="fas fa-terminal" aria-hidden="true"></i> Example
+                Commands
+              </h4>
+              <div class="code-block" id="modal-commands">
+                <!-- Commands will be inserted here -->
+              </div>
+            </div>
+
+            <div class="modal-section">
+              <h4>
+                <i class="fab fa-youtube" aria-hidden="true"></i> Video
+                Tutorials
+              </h4>
+              <div class="youtube-grid" id="modal-youtube">
+                <!-- YouTube links will be inserted here -->
+              </div>
+            </div>
+
+            <div class="modal-section">
+              <h4>
+                <i class="fas fa-link" aria-hidden="true"></i> Resources &
+                Documentation
+              </h4>
+              <div class="modal-links" id="modal-links">
+                <!-- Links will be inserted here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a
+              href="#"
+              class="btn btn-primary"
+              id="modal-official-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+              Official Website
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <img
+              src="images/logo-cybersec-hub.png"
+              alt="Cybersecurity Hub Logo"
+              class="logo-img"
+            />
+            <span class="logo-text"
+              >CYBERSECURITY<span class="logo-accent">HUB</span></span
+            >
+          </div>
+          <p>
+            Interactive cybersecurity learning for aspiring security
+            professionals.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="tools.html">Security Tools</a>
+          <a href="index.html#password-section">Password Analyzer</a>
+          <a href="index.html#cia-section">CIA Triad</a>
+          <a href="index.html#attacks-section">Attack Types</a>
+        </div>
+
+        <div class="footer-resources">
+          <h4>Resources</h4>
+          <a
+            href="https://www.comptia.org/certifications/security"
+            target="_blank"
+            rel="noopener"
+            >CompTIA Security+</a
+          >
+          <a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a>
+          <a
+            href="https://www.nist.gov/cybersecurity"
+            target="_blank"
+            rel="noopener"
+            >NIST Cybersecurity</a
+          >
+          <a href="https://www.sans.org/" target="_blank" rel="noopener"
+            >SANS Institute</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cybersecurity Hub. Created by Jonathan Litardo.</p>
+      </div>
+    </footer>
+  </body>
+</html>
