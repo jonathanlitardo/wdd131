@@ -1,6 +1,5 @@
 /* /* ========================================
    CYBERSEC HUB - Main Stylesheet
-   Dark Terminal Theme with Cyan Accents
    ======================================== */
 
 /* CSS Variables */
@@ -48,7 +47,6 @@
   --radius-lg: 20px;
 }
 
-/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -407,95 +405,12 @@ nav {
   pointer-events: none;
 }
 
-/* Terminal Window (kept for reference) */
-.terminal-window {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(0, 212, 255, 0.1);
-}
-
-.terminal-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.terminal-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.terminal-dot.red { background: #FF5F56; }
-.terminal-dot.yellow { background: #FFBD2E; }
-.terminal-dot.green { background: #27C93F; }
-
-.terminal-title {
-  margin-left: auto;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.terminal-body {
-  padding: 1.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  line-height: 1.8;
-}
-
-.terminal-body p {
-  margin-bottom: 0.5rem;
-}
-
-.prompt {
-  color: var(--accent-green);
-  margin-right: 0.5rem;
-}
-
-.command {
-  color: var(--text-primary);
-}
-
-.output {
-  color: var(--text-secondary);
-  padding-left: 1.5rem;
-}
-
-.output.success {
-  color: var(--accent-cyan);
-}
-
-.cursor {
-  animation: blink 1s step-end infinite;
-  color: var(--accent-cyan);
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
 .typing {
   overflow: hidden;
   border-right: 2px solid var(--accent-cyan);
   white-space: nowrap;
   animation: typing 2s steps(25) 1s forwards, blinkCursor 0.7s step-end infinite 3s;
   width: 0;
-}
-
-@keyframes typing {
-  to { width: 100%; }
-}
-
-@keyframes blinkCursor {
-  50% { border-color: transparent; }
 }
 
 /* Sections */
@@ -2097,9 +2012,7 @@ footer {
 }
 
 
-/* ============================================
-   Enhanced CIA Triad Details
-   ============================================ */
+
 .details-tagline {
   color: var(--accent-cyan);
   font-size: 1.1rem;
@@ -2224,13 +2137,6 @@ footer {
 
 
 
-
-
-/* ============================================
-   CIA Triad Cards & Modal - ADD THIS TO YOUR style.css
-   ============================================ */
-
-/* CIA Cards Container */
 .cia-triad-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2544,33 +2450,6 @@ footer {
 }
 
 
-/* Social Media Links */
-.social-links {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  transition: var(--transition-fast);
-}
-
-.social-links a:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  transform: translateY(-2px);
-}
-
 /* Visually Hidden (for screen readers) */
 .visually-hidden {
   position: absolute;
@@ -2614,3 +2493,39 @@ footer {
 }
 
 
+
+/* Accessibility - Improved Color Contrast */
+/* Increase contrast for muted text */
+:root {
+  --text-muted: #8892A6; /* Changed from #5A6478 - better contrast */
+}
+
+/* Section tag text */
+.section-tag {
+  color: #7DD3FC; /* Lighter cyan for better contrast */
+}
+
+/* Footer text */
+.footer-brand p,
+.footer-links a,
+.footer-resources a,
+.footer-bottom p {
+  color: #9CA3AF; /* Better contrast gray */
+}
+
+/* Quiz feedback */
+.quiz-feedback {
+  color: #E5E7EB;
+}
+
+/* Placeholder text */
+input::placeholder {
+  color: #9CA3AF;
+}
+
+.footer-heading {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}

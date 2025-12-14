@@ -287,7 +287,7 @@ triadItems.forEach(item => {
 });
 
 // ============================================
-// CIA Quiz (Using imported questions)
+// CIA Quiz
 // ============================================
 const QUIZ_LENGTH = 6;
 let currentQuestion = 0;
@@ -642,11 +642,3 @@ if (ciaModal) {
     }
   });
 }
-
-// Close on Escape key (add closeCIAModal to your existing keydown handler)
-// document.addEventListener('keydown', (e) => {
-//   if (e.key === 'Escape') {
-//     closeAttackModal();
-//     closeCIAModal();  // <-- Add this line
-//   }
-// });

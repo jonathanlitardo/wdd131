@@ -80,8 +80,8 @@ export const securityTools = [
     ],
     youtube: [
       { title: "Nmap Tutorial for Beginners", url: "https://www.youtube.com/watch?v=4t4kBkMsDbQ", channel: "NetworkChuck" },
-      { title: "Nmap Full Course", url: "https://www.youtube.youtube.com/watch?v=5MTZdN9TEO4", channel: "HackerSploit" },
-      { title: "Advanced Nmap Techniques", url: "https://www.youtube.com/watch?v=_JvtO-oe8k8", channel: "IppSec" }
+      { title: "Nmap Full Course", url: "https://www.youtube.com/watch?v=5MTZdN9TEO4&list=PLBf0hzazHTGM8V_3OEKhvCM9Xah3qDdIx", channel: "HackerSploit" },
+      { title: "Advanced Nmap Techniques", url: "https://www.youtube.com/watch?v=lXK5j2nRuv8", channel: "Hak5" }
     ]
   },
 
@@ -201,8 +201,8 @@ export const securityTools = [
       { name: "OffSec Training", url: "https://www.offsec.com/courses/", type: "course" }
     ],
     youtube: [
-      { title: "Kali Linux Full Course", url: "https://www.youtube.com/watch?v=8dWL3wF_OMw", channel: "NetworkChuck" },
-      { title: "Kali Tools Overview", url: "https://www.youtube.com/watch?v=I1XjO-8aCzy", channel: "HackerSploit" }
+      { title: "Kali Linux Full Course", url: "https://www.youtube.com/watch?v=AnwgxRtWXLI&list=PLhfrWIlLOoKMe1Ue0IdeULQvEgCgQ3a1B", channel: "David Bombal" },
+      { title: "Kali Tools Overview", url: "https://www.youtube.com/watch?v=vvp_OnKjhiky", channel: "Mr.PiwPiew" }
     ]
   },
 
@@ -240,8 +240,8 @@ export const securityTools = [
       { name: "Password Cracking Rules", url: "https://www.openwall.com/john/doc/OPTIONS.shtml", type: "docs" }
     ],
     youtube: [
-      { title: "John the Ripper Tutorial", url: "https://www.youtube.com/watch?v=xy7wGBdCY38", channel: "HackerSploit" },
-      { title: "Password Cracking Basics", url: "https://www.youtube.com/watch?v=Vx4g1D4OEcE", channel: "Null Byte" }
+      { title: "John the Ripper Tutorial", url: "https://www.youtube.com/watch?v=piNkLNqDto4", channel: "CyberSite" },
+      { title: "Password Cracking Basics", url: "https://www.youtube.com/watch?v=5MLprTAxYDA", channel: "G MAN : Security" }
     ]
   },
 
@@ -433,8 +433,8 @@ export const securityTools = [
       { name: "Wireless Attacks Guide", url: "https://book.hacktricks.xyz/wifi", type: "reference" }
     ],
     youtube: [
-      { title: "Aircrack Tutorial", url: "https://www.youtube.com/watch?v=AG8ZK8tJ3Z4", channel: "HackerSploit" },
-      { title: "Wi-Fi Hacking Basics", url: "https://www.youtube.com/watch?v=8V3RSyhBv3s", channel: "NetworkChuck" }
+      { title: "Wi-Fi Hacking Basics", url: "https://www.youtube.com/watch?v=o3g1AXQoEHE", channel: "Cyb3rMaddy" },
+      { title: "Aircrack Tutorial", url: "https://www.youtube.com/watch?v=uKZb3D-PHS0", channel: "Hak5" }
     ]
   },
 
